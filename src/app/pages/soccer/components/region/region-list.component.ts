@@ -1,8 +1,8 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router-deprecated';
-import { BaCard } from './../../../../theme/components'
-
-
+import { BaCard } from './../../../../theme/components';
+import { HighlightDirective } from './region.directives';
+ 
 // services
 import { RegionService } from './../../../../services/sport-center.services/soccer-center.services/region-services'
 
@@ -14,7 +14,8 @@ import { RegionModel } from './../../../../../models/'
     moduleId: module.id,
     selector: 'region-list',
     template: require('./region-list.component.html'),
-    directives:[BaCard],
+    directives:[BaCard, HighlightDirective],
+    styles: [require('./region.scss')],
     providers: [RegionService]
 })
 export class RegionListComponent implements OnInit, OnDestroy {
@@ -36,7 +37,11 @@ export class RegionListComponent implements OnInit, OnDestroy {
      }
 
     ngOnDestroy() { 
-    
     }
+
+    onSelect(region: RegionModel){
+        this._router.navigate(['RegionDetail', {id: region.regionId}]);
+    }
+    
 
 }
