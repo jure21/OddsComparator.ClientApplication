@@ -9,7 +9,7 @@ export const menuItems = [
   },
   {
     title: 'Soccer',
-    component: 'SoccerList',
+    component: 'SoccerCenter',
     icon: 'ion-ios-baseball',
     selected: false,
     expanded: false,

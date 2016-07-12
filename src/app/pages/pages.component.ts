@@ -4,7 +4,7 @@ import {RouteConfig} from '@angular/router-deprecated';
 import {BaPageTop, BaContentTop, BaSidebar, BaBackTop} from '../theme/components';
 
 import { Dashboard } from './dashboard';
-import { SoccerListComponent } from './soccer';
+import { SoccerCenterComponent } from './soccer';
 
 @Component({
   selector: 'pages',
@@ -23,7 +23,7 @@ import { SoccerListComponent } from './soccer';
     <footer class="al-footer clearfix">
       <div class="al-footer-right">Created with <i class="ion-heart"></i></div>
       <div class="al-footer-main clearfix">
-        <div class="al-copy">&copy; <a href="http://akveo.com">Akveo</a> 2016</div>
+        <div class="al-copy">&copy; <a>Jurica Penjgusic</a> 2016</div>
         <ul class="al-share clearfix">
           <li><i class="socicon socicon-facebook"></i></li>
           <li><i class="socicon socicon-twitter"></i></li>
@@ -43,9 +43,9 @@ import { SoccerListComponent } from './soccer';
     useAsDefault: true,
   },
   {
-    name:'SoccerList',
-    component: SoccerListComponent,
-    path: '/soccer-list'
+    name:'SoccerCenter',
+    component: SoccerCenterComponent,
+    path: '/soccer-center/...'
   }
 ])
 export class SportCenterComponent {
