@@ -1,1 +1,1 @@
-export * from './soccer-list.component';
+export * from './soccer-center.component';
