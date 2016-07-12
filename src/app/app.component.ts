@@ -4,7 +4,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 import { RouteConfig } from '@angular/router-deprecated';
 
 import { SportCenterComponent} from './pages';
-import { SoccerCenterComponent } from './pages/soccer';
+import { SoccerListComponent } from './pages/soccer';
 import { AppState } from './app.state';
 import { BaThemeConfigProvider, BaThemeConfig } from './theme';
 import { BaThemeRun } from './theme/directives';
@@ -36,6 +36,11 @@ import { layoutPaths } from './theme/theme.constants';
     name: 'SportCenter',
     component: SportCenterComponent,
     useAsDefault: true,
+  },
+  {
+    path: '/soccer',
+    name: 'Soccer',
+    component: SoccerListComponent
   },
   {
     path: '/**',
