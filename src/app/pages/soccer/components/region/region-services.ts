@@ -1,32 +1,30 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from  '@angular/http';
+import 'rxjs/Rx';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
+import 'rxjs/add/operator/map';
 
 // models
-import { RegionModel } from './../../../../../models';
+import { RegionModel } from './../../../../models';
 
-let REGIONS = [
-  new RegionModel(1,"England Premier", 3),
-  new RegionModel(2,"England Premier", 5),
-  new RegionModel(3,"England Premier", 6),
-
-];
-
-let regionsPromise = Promise.resolve(REGIONS)
 
 @Injectable()
 export class RegionService{
 
-    private _regionsUrl = 'app/regions';
+    private _regionsUrl = 'api/regions.json';
+    private _testUrl = ' http://date.jsontest.com';
 
     constructor(private _http: Http) { }
 
-    getRegions(){
-        return regionsPromise;
-        // return this._http.get(this._regionsUrl)
-        // .map(this.extractData)
-        // .catch(this.handleError);
+    getRegions(): Observable<any[]>{
+       return this._http.get(this._regionsUrl)
+                        .map(res => res.json())
+                        .catch(this.handleError);
+    }
+
+    getCurrentTime(){
+      return this._http.get(this._testUrl).map(res => res.json());
     }
 
     private extractData(res: Response){

@@ -1,0 +1,27 @@
+[
+        {
+            "sportId": "1",
+            "sportName:": "Soccer",
+            "regionId": "23",
+            "regionName": "England",
+            "regionImage": "img-england",
+            "totalLeagues": 4
+        },
+        {
+            "sportId": "2",
+            "sportName:": "Soccer",
+            "regionId": "32",
+            "regionName": "France",
+            "regionImage": "img-france",
+            "totalLeagues": 6
+        },
+        {
+            "sportId": "1",
+            "sportName:": "Soccer",
+            "regionId": "3",
+            "regionName": "Russia",
+            "regionImage": "img-russia",
+            "totalLeagues": 6
+        }
+
+]
