@@ -4,7 +4,7 @@ import {RouteConfig} from '@angular/router-deprecated';
 import {BaPageTop, BaContentTop, BaSidebar, BaBackTop} from '../theme/components';
 
 import { Dashboard } from './dashboard';
-import { SoccerListComponent } from './soccer';
+import { SoccerCenterComponent } from './soccer';
 
 @Component({
   selector: 'pages',
@@ -43,9 +43,9 @@ import { SoccerListComponent } from './soccer';
     useAsDefault: true,
   },
   {
-    name:'SoccerList',
-    component: SoccerListComponent,
-    path: '/soccer-list'
+    name:'Soccer-center',
+    component: SoccerCenterComponent,
+    path: '/soccer-center/...'
   }
 ])
 export class SportCenterComponent {
