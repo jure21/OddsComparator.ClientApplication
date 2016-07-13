@@ -1,5 +1,9 @@
 import { Directive, ElementRef, HostListener, Input } from '@angular/core';
 
+/*
+ * Directive for highlight element
+ */
+
 @Directive({
   selector: '[opacityHighlight]'
 })
